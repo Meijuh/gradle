@@ -144,6 +144,7 @@ public class DefaultWorkerProcess implements WorkerProcess {
             try {
                 execResult.rethrowFailure().assertNormalExitValue();
             } catch (Throwable e) {
+                LOGGER.error("meijer: ", e);
                 processFailure = e;
             }
             running = false;
